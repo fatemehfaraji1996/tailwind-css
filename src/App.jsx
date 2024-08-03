@@ -1,12 +1,14 @@
-import "./index.css";
+import Header from "./components/header";
 
+// import "./index.css";
+import FirstMain from "./components/FirstMain";
 function App() {
   return (
-  <>
-      <p className="text-5xl">Vite + React</p>
-      <h1 className="italic">po</h1>
-    
-  </>
+    <>
+      {/* <Header/> */}
+<FirstMain></FirstMain>
+   
+    </>
   );
 }
 
