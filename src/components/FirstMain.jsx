@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 const data = [
   {
     image: "https://img.icons8.com/stickers/100/performance-2.png",
@@ -29,10 +29,12 @@ const data = [
   //           p:'Streamline the deployment process of Vite-based projects to production environments with optimized build configurations and deployment strategies.'
   //             },
 ];
+
 export default function FirstMain() {
   return (
     <>
-      <div className=" sm:flex-col-reverse md:flex lg:flex-row mr-5 ml-10 xl:flex-row 2xl:flex-row">
+    < div className=" w-auto">
+      <div className="flex flex-col-reverse sm:flex-col-reverse md:flex lg:flex-row lg:mr-5 ml-10 xl:flex-row 2xl:flex-row xl:mr-5">
         <div className="flex-col  ">
           <h1 className="text-7xl font-serif font-bold mb-10">
             Scalable Apps with frameworks
@@ -77,11 +79,13 @@ export default function FirstMain() {
       </div>
       {/*              start        cards                */}
 
-
-      <div className=" sm:bg-yellow-400 sm:flex sm:flex-row  md:bg-orange-700 md:flex flex-row  lg:bg-slate-700 lg:flex flex-row ">
+      <div className=" max-w-7xl mr-5 ml-5 flex flex-col gap-14 justify-center sm:bg-yellow-400 sm:flex-row  md:bg-orange-700 md:flex flex-row  lg:bg-slate-700 lg:flex lg:flex-row  lg: flex justify-center">
         {data.map((item, index) => {
           return (
-            <div className="flex">
+            <div
+              key={index}
+              className="flex  hover:bg-indigo-50 drop-shadow-sm"
+            >
               <div className="flex ">
                 <img className="w-8 h-8" src={item.image} alt="" />
                 <div className="flex-col ">
@@ -93,6 +97,55 @@ export default function FirstMain() {
           );
         })}
       </div>
+      {/*             end      cards*/}
+      <div className="flex justify-center mt-8">
+        <p className="text-xl">Works with your technologies</p>
+      </div>
+      {/* start pic */}
+      <div className="flex justify-center gap-32 mt-11">
+        <img src="https://tailwind-shadcn.netlify.app/images/js.png" alt="" />
+        <img src="https://tailwind-shadcn.netlify.app/images/ts.png" alt="" />
+        <img
+          src="https://tailwind-shadcn.netlify.app/images/react.png"
+          alt=""
+        />
+        <img
+          src="https://tailwind-shadcn.netlify.app/images/redux.png"
+          alt=""
+        />
+        <img
+          src="https://tailwind-shadcn.netlify.app/images/tailwind.png"
+          alt=""
+        />
+        <img
+          src="https://tailwind-shadcn.netlify.app/images/nextjs.png"
+          alt=""
+        />
+      </div>
+      {/* end pic */}
+      <div className="flex flex-col  gap-5 w-3/4 h-96 bg-black  mr-auto ml-auto rounded-lg mt-24">
+        <div className="mr-auto ml-auto mt-16">
+          <h2 className="text-7xl text-white">Build faster websites</h2>
+        </div>
+        <div className="mr-auto ml-auto mt-4">
+          <p className="text-white">
+            Pull content from anywhere and serve it fast with Astro's next-gen
+            island architecture
+          </p>
+          <div className="mr-auto ml-auto">
+            <button className="bg-white p-4 rounded-lg mt-12">
+              Get started
+            </button>
+          </div>
+        </div>
+      </div>
+      {/*       end */}
+      <div className="flex flex-col mt-36 mr-auto ml-auto">
+        <p className="">Copyright © 2024. All rights reserved</p>
+        <p className="">Made by Web3Templates</p>
+        </div>
+        </div>
+
     </>
   );
 }
