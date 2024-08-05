@@ -15,26 +15,31 @@ const data = [
     h3: "Redux State Management",
     p: "Efficiently manage complex application state using Redux Toolkit, providing simplified syntax and built-in best practices for developers.",
   },
-  // ,  {
-  //   image:'https://img.icons8.com/3d-fluency/94/deployment.png',
-  //   h3:'Tailwind Responsive Design',
-  //   p:'Efficiently manage complex application state using Redux Toolkit, providing simplified syntax and built-in best practices for developers.'
-  //     },  {
-  //       image:'https://img.icons8.com/color/48/combine.png',
-  //       h3:'Vite Production Deployment',
-  //       p:'Streamline the deployment process of Vite-based projects to production environments with optimized build configurations and deployment strategies.'
-  //         },  {
-  //           image:'https://img.icons8.com/color/48/checked-identification-documents.png',
-  //           h3:'React Library Integration',
-  //           p:'Streamline the deployment process of Vite-based projects to production environments with optimized build configurations and deployment strategies.'
-  //             },
+  ,
+  {
+    image: "https://img.icons8.com/3d-fluency/94/deployment.png",
+    h3: "Tailwind Responsive Design",
+    p: "Efficiently manage complex application state using Redux Toolkit, providing simplified syntax and built-in best practices for developers.",
+  },
+  {
+    image: "https://img.icons8.com/color/48/combine.png",
+    h3: "Vite Production Deployment",
+    p: "Streamline the deployment process of Vite-based projects to production environments with optimized build configurations and deployment strategies.",
+  },
+  {
+    image:
+      "https://img.icons8.com/color/48/checked-identification-documents.png",
+    h3: "React Library Integration",
+    p: "Streamline the deployment process of Vite-based projects to production environments with optimized build configurations and deployment strategies.",
+  },
 ];
 
 export default function FirstMain() {
+  let pp = 0;
   return (
     <>
-    < div className=" w-auto">
-      <div className="flex flex-col-reverse sm:flex-col-reverse md:flex lg:flex-row lg:mr-5 ml-10 xl:flex-row 2xl:flex-row xl:mr-5">
+      {/* < div className=" w-auto"> */}
+      <div className="flex flex-col-reverse sm:flex-col-reverse md:flex lg:flex-row  ml-10 xl:flex-row 2xl:flex-row ">
         <div className="flex-col  ">
           <h1 className="text-7xl font-serif font-bold mb-10">
             Scalable Apps with frameworks
@@ -59,7 +64,7 @@ export default function FirstMain() {
         </div>
 
         {/* pic */}
-        <div className="flex justify-center ">
+        <div className="flex">
           <img
             src="https://tailwind-shadcn.netlify.app/hero-source.svg"
             alt=""
@@ -79,12 +84,12 @@ export default function FirstMain() {
       </div>
       {/*              start        cards                */}
 
-      <div className=" max-w-7xl mr-5 ml-5 flex flex-col gap-14 justify-center sm:bg-yellow-400 sm:flex-row  md:bg-orange-700 md:flex flex-row  lg:bg-slate-700 lg:flex lg:flex-row  lg: flex justify-center">
+      <div className=" mr-5 ml-5 flex flex-col gap-14 justify-center sm:flex-row  md:flex flex-row  lg:flex lg:flex-row lg: flex justify-center">
         {data.map((item, index) => {
           return (
             <div
               key={index}
-              className="flex  hover:bg-indigo-50 drop-shadow-sm"
+              className="flex  hover:bg-indigo-50 drop-shadow-sm p-5"
             >
               <div className="flex ">
                 <img className="w-8 h-8" src={item.image} alt="" />
@@ -94,6 +99,7 @@ export default function FirstMain() {
                 </div>
               </div>
             </div>
+            
           );
         })}
       </div>
@@ -132,7 +138,7 @@ export default function FirstMain() {
             Pull content from anywhere and serve it fast with Astro's next-gen
             island architecture
           </p>
-          <div className="mr-auto ml-auto">
+          <div className="flex justify-center mr-auto ml-auto">
             <button className="bg-white p-4 rounded-lg mt-12">
               Get started
             </button>
@@ -140,12 +146,14 @@ export default function FirstMain() {
         </div>
       </div>
       {/*       end */}
-      <div className="flex flex-col mt-36 mr-auto ml-auto">
-        <p className="">Copyright © 2024. All rights reserved</p>
-        <p className="">Made by Web3Templates</p>
+      <div className="flex justify-center">
+        <div className="flex flex-col mt-16 mb-64 ">
+          <p className="">Copyright © 2024. All rights reserved</p>
+          <p className="mr-auto ml-auto"> Made by Web3Templates</p>
         </div>
-        </div>
+      </div>
 
+      {/* </div> */}
     </>
   );
 }
