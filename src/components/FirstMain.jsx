@@ -90,6 +90,8 @@ export default function FirstMain() {
             <div
               key={index}
               className="flex  hover:bg-indigo-50 drop-shadow-sm p-5"
+
+              
             >
               <div className="flex ">
                 <img className="w-8 h-8" src={item.image} alt="" />
